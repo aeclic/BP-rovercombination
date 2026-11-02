@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  样板 Mod：只用 Mod.xml，不写一行 C#。
+  放进 persistentDataPath/Mods/ 或随包放在 streamingAssets/Mods/ 都能被识别。
+  详细字段说明见仓库根目录 BPSIM_MODDING.md。
+-->
+<Mod>
+  <Name>示例插件</Name>
+  <Author>bpsim</Author>
+  <Version>1.0.0</Version>
+  <Description>Mod.xml 格式的样板包：声明一个可拖动的网页面板，演示新清单怎么写。</Description>
+  <MultiplayerCompatible>true</MultiplayerCompatible>
+
+  <!-- 稳定标识。存档/载具只认这个，改文件夹名不会让存档失效。 -->
+  <ID>5f0c1f0e-9b2a-4d3e-8a71-6c4b2d9e0f13</ID>
+
+  <Resources>
+    <Panel id="hello"
+           title="示例面板"
+           html="panel.html"
+           width="420"
+           height="320"
+           anchor="center"
+           autoOpen="false" />
+  </Resources>
+</Mod>

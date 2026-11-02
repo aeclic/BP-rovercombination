@@ -1,0 +1,22 @@
+Bpreboot_Skins, 1024, 318, 0.01302083
+bpreboot/AlienWoodenFrame, 258, 2, 105, 105, 0, 0, 0.4, 0.4
+bpreboot/AlienGlassFrame, 146, 2, 110, 110, 0, 0, 0.4, 0.4
+bpreboot/AlienEngineNormal, 705, 144, 90, 94, 0, 0, 0.4, 0.4
+bpreboot/AlienEngineBig, 797, 144, 114, 90, 0, 0, 0.4, 0.4
+bpreboot/AlienWheel, 2, 2, 142, 140, 0, 0, 0.4, 0.4
+bpreboot/AlienSpoke, 70, 251, 66, 64, 0, 0, 0.4, 0.4
+bpreboot/AlienSupport, 2, 251, 66, 65, 0, 0, 0.4, 0.4
+bpreboot/Piston, 215, 144, 100, 100, 0, 0, 0.4, 0.4
+bpreboot/PistonHandle, 447, 251, 100, 50, 0, 0, 0.4, 0.4
+bpreboot/LightningHook, 138, 251, 106, 58, 0, 0, 0.4, 0.4
+bpreboot/AlienRapidGun, 365, 2, 210, 105, 0, 0, 0.4, 0.4
+bpreboot/AlienRapidGunExtended, 577, 2, 210, 105, 0, 0, 0.4, 0.4
+bpreboot/RailGun, 317, 144, 228, 100, 0, 0, 0.4, 0.4
+bpreboot/HalfHorizontal, 913, 144, 105, 66, 0, 0, 0.4, 0.4
+bpreboot/T60Triangle, 789, 2, 105, 105, 0, 0, 0.4, 0.4
+bpreboot/T45Triangle, 109, 144, 104, 104, 0, 0, 0.4, 0.4
+bpreboot/TungstenCube, 896, 2, 106, 105, 0, 0, 0.4, 0.4
+bpreboot/AlienHyperPropeller, 547, 144, 54, 100, 0, 0, 0.4, 0.4
+bpreboot/AlienSantaSpring, 2, 144, 105, 105, 0, 0, 0.4, 0.4
+bpreboot/AlienMetalTNT, 603, 144, 100, 100, 0, 0, 0.4, 0.4
+bpreboot/Gatling, 246, 251, 199, 55, 0, 0, 0.4, 0.4

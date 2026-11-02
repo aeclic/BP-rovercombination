@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<!--SKIN_CSS-->
+</head>
+<body>
+<div id="root">
+  <header>
+    <span class="title">蒙皮</span>
+    <span id="version" class="version">v0</span>
+    <button id="close" title="关闭">✕</button>
+  </header>
+
+  <section class="block">
+    <h2>四角 <span class="hint">拖动改为数值精确输入</span></h2>
+    <div class="grid4 corners">
+      <label>左下 X<input id="bl-x" type="number" step="0.01"></label>
+      <label>左下 Y<input id="bl-y" type="number" step="0.01"></label>
+      <label>右下 X<input id="br-x" type="number" step="0.01"></label>
+      <label>右下 Y<input id="br-y" type="number" step="0.01"></label>
+      <label>右上 X<input id="tr-x" type="number" step="0.01"></label>
+      <label>右上 Y<input id="tr-y" type="number" step="0.01"></label>
+      <label>左上 X<input id="tl-x" type="number" step="0.01"></label>
+      <label>左上 Y<input id="tl-y" type="number" step="0.01"></label>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>边弯曲 <span class="hint">curve 垂直凸起 / along 沿边中点偏移</span></h2>
+    <div class="grid4 edges">
+      <label>下 curve<input id="cb-0" type="number" step="0.01"></label>
+      <label>右 curve<input id="cb-2" type="number" step="0.01"></label>
+      <label>上 curve<input id="cb-1" type="number" step="0.01"></label>
+      <label>左 curve<input id="cb-3" type="number" step="0.01"></label>
+      <label>下 along<input id="al-0" type="number" step="0.01"></label>
+      <label>右 along<input id="al-2" type="number" step="0.01"></label>
+      <label>上 along<input id="al-1" type="number" step="0.01"></label>
+      <label>左 along<input id="al-3" type="number" step="0.01"></label>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>贴图</h2>
+    <div class="row">
+      <label class="inline"><input id="mode-tile" type="radio" name="mode" value="1"> 平铺</label>
+      <label class="inline"><input id="mode-stretch" type="radio" name="mode" value="0"> 拉伸</label>
+      <label class="inline">X<input id="tile-x" type="number" step="0.1" min="0.1"></label>
+      <label class="inline">Y<input id="tile-y" type="number" step="0.1" min="0.1"></label>
+    </div>
+    <div class="textures" id="textures"></div>
+  </section>
+
+  <section class="block">
+    <h2>图集裁剪 <span class="hint">在图上拖出一块区域，只用那块贴图</span></h2>
+    <div class="crop-view" id="crop-view">
+      <img id="crop-image" alt="">
+      <div class="crop-rect" id="crop-rect"></div>
+    </div>
+    <div class="grid4 crop-fields">
+      <label>X<input id="uv-x" type="number" step="0.01" min="0" max="1"></label>
+      <label>Y<input id="uv-y" type="number" step="0.01" min="0" max="1"></label>
+      <label>宽<input id="uv-w" type="number" step="0.01" min="0.01" max="1"></label>
+      <label>高<input id="uv-h" type="number" step="0.01" min="0.01" max="1"></label>
+    </div>
+    <div class="row">
+      <button id="uv-full" type="button">整张图</button>
+      <label class="inline"><input id="uv-square" type="checkbox"> 锁定方形</label>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>颜色</h2>
+    <div class="row">
+      <input id="color" type="color">
+      <label class="inline">A<input id="alpha" type="range" min="0" max="1" step="0.01"></label>
+    </div>
+  </section>
+
+  <footer id="status">就绪</footer>
+</div>
+<!--SKIN_JS-->
+</body>
+</html>

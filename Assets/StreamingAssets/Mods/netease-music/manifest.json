@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "id": "netease-music",
+  "name": "网易云音乐",
+  "version": "1.0.0",
+  "author": "bpsim",
+  "description": "样板 Mod：一个纯网页内容包，演示如何用 manifest + HTML/CSS/JS 在游戏内开出可拖动的网页面板。",
+  "type": "panel",
+  "affectsSimulation": false,
+  "multiplayerSafe": true,
+  "tags": ["样板", "网页", "音乐"],
+  "panels": [
+    {
+      "id": "player",
+      "title": "网易云音乐",
+      "html": "panel.html",
+      "css": "panel.css",
+      "js": "panel.js",
+      "width": 460,
+      "height": 680,
+      "anchor": "bottom-right",
+      "autoOpen": false
+    }
+  ]
+}

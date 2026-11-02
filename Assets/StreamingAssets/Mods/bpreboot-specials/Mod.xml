@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  bpreboot 特殊部件：把 bp-rebooted（https://github.com/Goggs77/bp-rebooted）
+  里 BPLE/bpsim 本体没有的皮肤与变种，作为【额外】部件加进建造列表。
+
+  不替换任何原版部件：所有新部件都用 ≥9000 的自定义索引挂在各自家族末尾。
+
+  <Assemblies> 指向预编译的 BprebootSpecials.dll（源码仍留在 Code/ 下备查）。
+-->
+<Mod>
+  <Name>bpreboot 特殊部件</Name>
+  <Author>bpsim 移植</Author>
+  <Version>0.1.0</Version>
+  <Description>把 bp-rebooted 里本体没有的部件变种补进建造列表：异形木框/异形玻璃框、半高护栏/60°·45°三角框/钨方块、异形高速桨、异形引擎与异形大型引擎、异形弹簧、异形 TNT、活塞拳套箱、异形越野吸盘轮、异形速射枪/加长速射枪/闪电钩/磁轨炮/加特林。全部是新增条目，不替换原版部件。</Description>
+  <MultiplayerCompatible>false</MultiplayerCompatible>
+  <MinGameVersion>0.0.12</MinGameVersion>
+
+  <ID>a1f0c6d2-8f4b-4a7e-9c31-5b6e0d7a2c48</ID>
+
+  <EntryPoint type="BprebootSpecials.Entry" />
+
+  <!-- 预编译产物：玩家包里没有 C# 编译器，运行时编译 Code/*.cs 会失败。
+       这里直接加载预编译的 DLL；改源码后需重新编译并覆盖同名 dll。 -->
+  <Assemblies>
+  	<Assembly path="BprebootSpecials.dll" />
+  </Assemblies>
+</Mod>

@@ -1,0 +1,33 @@
+# ---------------------------------------------------------------------------
+# Binary assets: keep byte-for-byte, no text normalization, no diff
+# ---------------------------------------------------------------------------
+*.dll           binary
+*.so            binary
+*.dylib         binary
+*.a             binary
+*.bundle        binary
+*.exe           binary
+*.dat           binary
+*.bytes         binary
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.gif           binary
+*.psd           binary
+*.tga           binary
+*.ttf           binary
+*.otf           binary
+*.apk           binary
+*.unitypackage  binary
+
+# ---------------------------------------------------------------------------
+# Git LFS
+#
+# These two Chromium runtime DLLs are 215 MB / 217 MB, above GitHub's 100 MB
+# per-file limit, so they must travel through Git LFS. Everything else in the
+# repository stays a plain blob.
+#
+# Listed last so these rules win over the "*.dll binary" line above.
+# ---------------------------------------------------------------------------
+Assets/Vuplex/WebView/Standalone/Windows/Plugins/libcef_with_codecs.dll           filter=lfs diff=lfs merge=lfs -text
+Assets/Vuplex/WebView/Standalone/Windows/Plugins/VuplexWebViewChromium/libcef.dll  filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,214 @@
+:root {
+  --bg: #12141a;
+  --bg2: #1a1d26;
+  --line: #2c3040;
+  --fg: #d8dae2;
+  --dim: #7b8098;
+  --accent: #39c2a6;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: transparent;
+  color: var(--fg);
+  font: 12px/1.45 "Segoe UI", "Microsoft YaHei", sans-serif;
+  user-select: none;
+  overflow: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--line);
+}
+
+.title { font-weight: 600; font-size: 13px; letter-spacing: .5px; }
+
+.version { color: var(--dim); }
+
+#close {
+  margin-left: auto;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+  line-height: 1;
+}
+
+#close:hover { background: #43202a; border-color: #6b3040; }
+
+.block {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+h2 {
+  margin: 0 0 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: .5px;
+}
+
+.hint { color: var(--dim); font-weight: 400; margin-left: 6px; }
+
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: var(--dim);
+  font-size: 10px;
+  min-width: 0;
+}
+
+label.inline {
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--fg);
+}
+
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  min-width: 0;
+  padding: 3px 4px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: #0c0e13;
+  color: var(--fg);
+  font: inherit;
+  font-size: 11px;
+}
+
+input[type="number"]:focus { outline: none; border-color: var(--accent); }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input[type="range"] { width: 90px; accent-color: var(--accent); }
+
+input[type="color"] {
+  width: 34px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: transparent;
+}
+
+.textures {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(58px, 1fr));
+  gap: 4px;
+  margin-top: 8px;
+  max-height: 132px;
+  overflow: auto;
+}
+
+.textures button {
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #0c0e13 center/cover no-repeat;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+
+.textures button.active { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset; }
+
+.textures button.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dim);
+  font-size: 10px;
+}
+
+footer {
+  margin-top: auto;
+  padding: 6px 10px;
+  background: var(--bg2);
+  border-top: 1px solid var(--line);
+  color: var(--dim);
+  font-size: 10px;
+}
+
+footer.error { color: #e2707a; }
+
+/* 图集裁剪：预览图上盖一个可拖动的取景框 */
+.crop-view {
+  position: relative;
+  width: 100%;
+  max-height: 190px;
+  aspect-ratio: 1;
+  margin-top: 6px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #0c0e13 repeating-conic-gradient(#16181f 0% 25%, #0c0e13 0% 50%) 50% / 16px 16px;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+.crop-view img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.crop-rect {
+  position: absolute;
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}
+
+.crop-fields { margin-top: 6px; }
+
+button#uv-full {
+  padding: 3px 8px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--bg2);
+  color: var(--fg);
+  font-size: 11px;
+  cursor: pointer;
+}
+
+button#uv-full:hover { border-color: var(--accent); }

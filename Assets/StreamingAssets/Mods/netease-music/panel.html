@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网易云音乐</title>
+</head>
+<body>
+  <div id="app">
+    <header id="topbar">
+      <span class="logo">网易云音乐</span>
+      <div class="search">
+        <input id="search" type="text" placeholder="搜索歌曲、歌手、歌单">
+      </div>
+      <button id="close" title="关闭">✕</button>
+    </header>
+
+    <main>
+      <section id="now">
+        <div id="cover" class="cover"></div>
+        <div class="meta">
+          <div id="song-title" class="song-title">未在播放</div>
+          <div id="song-artist" class="song-artist">选择一首歌开始</div>
+        </div>
+      </section>
+
+      <section id="source-row">
+        <input id="url" type="text" placeholder="粘贴音频直链（https://…/song.mp3）">
+        <button id="play-url" title="播放此地址">播放地址</button>
+      </section>
+      <div id="status" class="status"></div>
+
+      <section id="progress-wrap">
+        <span id="cur-time" class="time">00:00</span>
+        <input id="progress" type="range" min="0" max="100" value="0" step="0.1">
+        <span id="total-time" class="time">00:00</span>
+      </section>
+
+      <section id="controls">
+        <button id="prev" class="ctrl" title="上一首">⏮</button>
+        <button id="play" class="ctrl play" title="播放">▶</button>
+        <button id="next" class="ctrl" title="下一首">⏭</button>
+      </section>
+
+      <section id="playlist-wrap">
+        <h2>播放列表 <span id="list-count" class="hint"></span></h2>
+        <ul id="playlist"></ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
